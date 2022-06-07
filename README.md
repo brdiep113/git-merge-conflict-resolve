@@ -88,4 +88,5 @@ fork this repository and follow the steps below.
 
     ```
     $ git commit -am "merged and resolved the conflict in merge.txt"
+    $ git push --force-with-lease
     ```
