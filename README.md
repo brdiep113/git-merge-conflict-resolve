@@ -106,4 +106,15 @@ fork this repository and follow the steps below.
     $ git push --set-upstream origin diverged
     ```
 
-#### When you 
+    #### MERGE BRANCH TO MAIN ON GITHUB
+
+### checkout main branch and apply changes to the same file, once you try to push without pulling you will see the diverged error appear.
+
+    ```BASH
+    $ git checkout main
+    $ echo  "local branch changes" >> diverged.txt
+    $ git commit -am"made local changes"; git push # causes error
+    $ git pull # cant pull changes
+    ```
+
+### To resolve this diverged you need to rebase your changes onto the remote branch
