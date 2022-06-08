@@ -47,6 +47,7 @@ fork this repository and follow the steps below.
     CONFLICT (content): Merge conflict in merge.txt
     Automatic merge failed; fix conflicts and then commit the result.
     ```
+
 ## How to Read the Conflict Files.
 
 ### Now that we are in a situation where we have seen a merge conflict we will try to resolve it. First lets see what the merge conflict is. if we do git status we should see the files which have conflicts within them.
@@ -76,6 +77,7 @@ fork this repository and follow the steps below.
     >>>>>>> new_branch_to_merge_later
     ```
 
+## Fixing Them
 ### You should open the `merge.txt` file and choose which changes you want to keep, while ofcourse removing the lines with the <<<<<<<,  >>>>>>>, and ======== in this case we will comebine the two lines.
 
     ```
@@ -90,3 +92,13 @@ fork this repository and follow the steps below.
     $ git commit -am "merged and resolved the conflict in merge.txt"
     $ git push --force-with-lease
     ```
+
+# Resolving Diverged Branches
+
+## Creating a diverged branch
+
+### In order to create a diverged branch you need to have some changes that are in your remote branch which aren't in your local branch, this causes you to not be able to push changes to the remote branch. To create a diverged branch we will make a change within github to the main branch `diverged.txt` file (remote branch change) and then try to make a change on our local computers main branch (local branch change) to the same file which conflicts with the remote branch change.
+
+
+
+####
