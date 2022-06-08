@@ -117,4 +117,27 @@ fork this repository and follow the steps below.
     $ git pull # cant pull changes
     ```
 
-### To resolve this diverged you need to rebase your changes onto the remote branch
+### To resolve this diverged you need to merge your local branch with the remote branch and resolve the merge conflicts for the files which have overlapping changes i.e. in this case we will have changes to make in the `diverged.txt` file. we will have include both changes and make a final commit to fix them
+
+    ```BASH
+    $ git merge origin/main
+    $ cat diverged.txt
+    Use this file to test fixing diverged branches
+    <<<<<<< HEAD
+    local changes made here
+    =======
+    remote branch changes
+    >>>>>>> origin/main
+    ```
+
+    (APPLY CHANGES)
+
+    ```BASH
+    $ cat diverged.txt
+    Use this file to test fixing diverged branches
+    local changes made here
+    remote branch changes
+    $ git commit -am "resolved merge conflicts"; git push
+    ```
+
+### The number one way to never get diveregd branches is to always make sure you do a `$ git pull` before making any new commits to your local branches. this will make sure that the local and remote branches are always in sync with each other.
