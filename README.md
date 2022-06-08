@@ -99,6 +99,3 @@ fork this repository and follow the steps below.
 
 ### In order to create a diverged branch you need to have some changes that are in your remote branch which aren't in your local branch, this causes you to not be able to push changes to the remote branch. To create a diverged branch we will make a change within github to the main branch `diverged.txt` file (remote branch change) and then try to make a change on our local computers main branch (local branch change) to the same file which conflicts with the remote branch change.
 
-
-
-####
