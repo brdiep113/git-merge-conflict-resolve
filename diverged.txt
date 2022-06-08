@@ -1,1 +1,2 @@
 Use this file to test fixing diverged branches
+local changes made here
