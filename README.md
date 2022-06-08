@@ -97,8 +97,13 @@ fork this repository and follow the steps below.
 
 ## Creating a diverged branch
 
-### In order to create a diverged branch you need to have some changes that are in your remote branch which aren't in your local branch, this causes you to not be able to push changes to the remote branch. To do this we will create another branch and submit a pr in github into the main branch then try to make changes on the local branch of main which conflict with the remote changes.  This usually only happens if you don't PULL changes before making your own changes to your local branch
+### In order to create a diverged branch you need to have some changes that are in your remote branch which aren't in your local branch, this causes you to not be able to push changes to the remote branch. To do this we will create another branch and submit a pr in github into the main branch then try to make changes on the local branch of main which conflict with the remote changes.  This usually only happens if you don't PULL changes before making your own changes to your local branch.
 
+    ```BASH
+    $ git checkout -b diverged
+    $ echo "remote branch changes" >> diverged.txt
+    $ git commit -am "made remote changes"
+    $ git push --set-upstream origin diverged
+    ```
 
-
-####
+#### When you 
