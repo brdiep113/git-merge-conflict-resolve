@@ -3,3 +3,4 @@ content to append
 totally different content to merge later
 
 adding changes to merge.txt
+adding conflicting changes to merge later to merge.txt
